@@ -1,0 +1,27 @@
+.more-content__button {
+	background: #fff;
+	border-radius: 10px;
+	clear: both;
+	color: #000;
+	display: block;
+	font-family: Helmet, Freesans, sans-serif;
+	font-size: 1.5em;
+	margin: 0 1em 1em;
+	padding: 0.5em 0;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+@include respondMinMax(320px, false) {
+
+	.more-content__button {
+		margin: 0 auto 1em;
+		max-width: 300px;
+	}
+
+}
+
+.more-content__button:hover {
+	background: #f60;
+	text-decoration: none;
+}

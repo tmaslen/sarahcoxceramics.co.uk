@@ -1,0 +1,50 @@
+@if $button_component {
+
+    /**
+        BUTTON
+    */
+
+    .button {
+        border-radius: 0.25em;
+        background: orange;
+        background: rgba(255, 165, 0, 0.8);
+        color: #000;
+        cursor: pointer;
+        padding: 0.5em 0.75em;
+    }
+
+    .button__text {
+        position: absolute;
+        left: -10000px;
+    }
+
+    .button:hover {
+      background: #47a3da;
+    }
+
+    .button:hover {
+        background: #e6e6e6;
+        text-decoration: none;
+    }
+
+    .button--inline {
+        display: inline;
+    }
+
+    .button--close {
+
+        @extend .button;
+
+    }
+
+    .button--close:after {
+        content: "\00D7";
+        float: right;
+    }
+
+    .button--inline.button--close:after {
+        float: none;
+        padding-left: 0.5em;
+    }
+
+}

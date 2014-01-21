@@ -1,0 +1,31 @@
+/**
+  general/bootstrap
+*/
+
+$classic: false !default;
+$modern: false !default;
+$typography: assaye !default;
+$theme: vanilla !default;
+
+@import "../../site/defaults"; // user defined default overrides
+@import "../mixins/respond_min_max";
+@import "../mixins/grid";
+@import "reset";
+@import "../components/typography/coxy";
+@import "../components/nav/nav";
+@import "../components/button/button";
+@import "../components/icon/icon";
+@import "../components/hero/hero";
+@import "../components/two_column_list/two_column_list";
+@import "../components/themes/coral";
+@import "../components/more/more";
+@import "../components/click_to_zoom/click_to_zoom";
+
+
+.show {
+	display: block;
+}
+
+.hide {
+	display: none;
+}

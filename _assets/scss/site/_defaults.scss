@@ -1,0 +1,82 @@
+/**
+	DEFAULTS
+*/
+
+// ====================================================================
+// BREAK POINTS
+// ====================================================================
+
+// COMPACT: Modern mobiles in portrait 
+// orientation
+
+// $compactPortraitMin: 				320px;
+// $compactPortraitMax: 				639px;
+
+
+// COMPACT: Modern mobiles in landscape 
+// orientation
+
+// $compactLandscapeMin: 				480px;
+// $compactLandscapeMax: 				639px;
+
+
+// TABLET: Small tablets and large 
+// phones
+
+// $tabletMin: 							640px;
+// $tabletMax: 							959px;
+
+
+// LAPTOP: Small laptops and large 
+// tablets
+
+// $laptopMin: 							960px;
+// $laptopMax: 							1200px;
+
+
+// WIDE: Desktop monitors and large 
+// laptops
+
+// $desktopMin: 						1200px;
+
+
+// ====================================================================
+// STYLING
+// ====================================================================
+
+$typography:         assaye;
+$theme:              vanilla;
+
+// ====================================================================
+// PAGE COMPONENTS
+// ====================================================================
+
+$typography_component:      true;
+$navigation_component:      true;
+$button_component:          true;
+$two_column_list_component: true;
+$hero:                      true;
+$button_component:          true;
+
+
+// ====================================================================
+// GENERAL LAYOUT
+// ====================================================================
+
+// The maximum width each row of 
+// content will expand to. 
+
+$maxPageWidth: 							960px;
+
+
+// Left and right padding for all 
+// columns
+
+// $columnPadding: 						1em;
+
+
+// Add top padding to all rows.  Useful 
+// when setting bg colors on rows.  
+// Will also remove top padding on body
+
+$rowTopPadding: 						1em;

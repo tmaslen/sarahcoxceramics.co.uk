@@ -1,0 +1,242 @@
+@mixin image {
+
+    background: #999;
+    margin: 0 0 1.5em;
+    padding-top: 4px;
+
+    p {
+        color: #fff;
+        font-size: 8px;
+        font-size: 0.8rem;
+        line-height: 15px;
+        line-height: 1.5rem;
+        margin-bottom: 0;
+        padding: 0.5em;
+    }
+
+}
+
+@if $typography_component {
+
+    /**
+        TYPOGRAPHY ASSAYE
+    */
+
+    html {
+        color: #333;
+        font-size: 10px;
+        //text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    @include respondMinMax(480px, false) {
+        html {
+            font-size: 12px;
+        }
+    }
+
+    @include respondMinMax(640px, false) {
+        html {
+            font-size: 14px;
+        }
+    }
+
+    @include respondMinMax(840px, false) {
+        html {
+            font-size: 16px;
+        }
+    }
+
+    .site-title {
+        font-family: Cambria, Georgia, Times, Times New Roman, serif;
+        font-size: 3em;
+        font-weight: 300;
+        line-height: 1.5em;
+        text-align: center;
+    }
+
+    .byline {
+        color: #999;
+        font-family: Cambria, Georgia, Times, Times New Roman, serif;
+        font-size: 1em;
+        line-height: 1.5em;
+        margin: 0;
+        text-align: center;
+    }
+
+    @include respondMinMax(480px, false) {
+        .site-title {
+            text-align: left;
+        }
+
+        .byline {
+            text-align: left;
+        }
+    }
+
+    .introduction {
+        color: #333;
+        font-family: Helmet, Freesans, sans-serif;
+        font-family: "Georgia",sans-serif;
+        font-size: 1.5em;
+        font-weight: 200;
+        line-height: 1.5em;
+        margin-bottom: 0.7em;
+    }
+
+    .h1 {
+        font-family: Helmet, Freesans, sans-serif;
+        font-family: "Georgia",sans-serif;
+        font-size: 2.5em;
+        font-weight: 300;
+        line-height: 1.6em;
+        margin-bottom: 0.75em;
+    }
+
+    .h2 {
+        font-family: Helmet, Freesans, sans-serif;
+        font-family: "Georgia",sans-serif;
+        font-size: 2em;
+        line-height: 1em;
+        font-weight: 300;
+        margin-bottom: 1em;
+    }
+
+    .h3 {
+        color: #000;
+        font-family: "Georgia",sans-serif;
+        font-size: 1.5em;
+        font-weight: 600;
+        line-height: 1.5em;
+    }
+
+    .h4 {
+        color: #000;
+        font-family: "Georgia",sans-serif;
+        font-size: 1em;
+        font-weight: 600;
+        line-height: 1.5em;
+    }
+
+    p {
+        color: #000;
+        font-family: "Georgia",sans-serif;
+        font-size: 1em;
+        line-height: 1.5em;
+        margin: 0 0 1.5em;
+    }
+
+    li {
+        color: #000;
+        font-family: "Georgia",sans-serif;
+        font-size: 1em;
+        line-height: 1.5em;
+        list-style-position: inside;
+        margin: 0 0 1.5em;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a.noHref,
+    a.noHref:visited {
+        color: #000;
+    }
+
+    blockquote {
+
+        border-left: 0.5em solid #eee;
+        margin-bottom: 1em;
+        padding-left: 1em;
+
+        p {
+            margin: 0;
+        }
+
+        cite {
+            display: block;
+            margin-top: 1em;
+            font-size: 1em;
+            font-style: italic;
+        }
+
+    }
+
+    .image {
+
+        @include image;
+
+    }
+
+    .image--stretch {
+        
+        @include image;
+
+        img {
+            display: block;
+            width: 100%;
+        }
+        
+    }
+
+    .image--center {
+
+        @include image;
+
+        clear: both;
+        text-align: center;
+
+        img {
+            display: inline;
+        }
+
+    }
+
+    .image--left, .image--right {
+
+        @include image;
+
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+
+    }
+
+    @include respondMinMax(640px, false) {
+        .image--left {
+
+            @include image;
+
+            float: left;
+            margin: 0 15px 5px 0;
+            margin: 0 1.5rem 0.5rem 0;
+            width: 50%;
+        }
+
+        .image--right {
+
+            @include image;
+
+            float: right;
+            margin: 0 0 5px 15px;
+            margin: 0 0 0.5em 1.5rem;
+            width: 50%;
+        }
+    }
+
+    /**
+     NAVIGATION
+    */
+
+    .nav {
+        font-family: Helmet, Freesans, sans-serif;
+    }
+
+}

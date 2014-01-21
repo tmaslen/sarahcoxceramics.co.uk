@@ -1,0 +1,66 @@
+img {
+	cursor: pointer;
+}
+
+.click-to-zoom__modal {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 15;
+}
+
+.click-to-zoom__modal:before {
+	background: #000;
+	background: rgba(0, 0, 0, 0.75);
+	content: "";
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 10;
+}
+
+.click-to-zoom__close-button {
+	position: absolute;
+	right: 1em;
+	text-align: center;
+	top: 0;
+	z-index: 15;
+
+	span {
+		font-size: 4em;
+	}
+}
+
+@include respondMinMax(960px, false) {
+	.click-to-zoom__close-button {
+		right: 50%;
+		margin-right: -480px;
+	}
+}
+
+.click-to-zoom__close-button:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+.click-to-zoom__img-holder {
+	margin: 4em 1em 0;
+	position: relative;
+	z-index: 15;
+}
+
+@include respondMinMax(960px, false) {
+	.click-to-zoom__img-holder {
+		margin-left: auto;
+		margin-right: auto;
+		width: 960px;
+	}
+}
+
+.click-to-zoom__no {
+	cursor: auto;
+}

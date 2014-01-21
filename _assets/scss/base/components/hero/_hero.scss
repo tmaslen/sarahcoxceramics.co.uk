@@ -1,0 +1,74 @@
+@if $hero {
+
+  .section--hero {
+
+    padding-top: 0 !important;
+    position: relative;
+    z-index: 0;
+
+    .h1 {
+      color: orange;
+      color: rgba(255, 165, 0, 0.8);
+      font-size: 1em;
+      font-style: italic;
+      padding: 1em !important;
+      text-align: center;
+
+      span {
+        display: block;
+      }
+
+    }
+
+    .img {
+        display: block;
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+    .introduction {
+        padding-left: 2.75em;
+        padding-right: 2.75em;
+        margin-bottom: 0.75em;
+    }
+
+    .button {
+        padding-left: 1em;
+        padding-right: 1em;
+        text-transform: uppercase;
+    }
+
+  }
+
+  @include respondMinMax(320px, false) {
+
+    .section--hero {
+
+      margin-bottom: 1em;
+
+      .h1 {
+        background: #000;
+        background: rgba(0,0,0,0.7);
+        bottom: 0;
+        position: absolute;
+        margin-bottom: 0;
+      }
+
+    }
+
+  }
+
+  @include respondMinMax(450px, false) {
+
+    .section--hero {
+
+      .h1 {
+        font-size: 1em;
+        text-align: left;
+      }
+
+    }
+
+  }
+
+}

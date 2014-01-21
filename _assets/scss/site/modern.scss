@@ -1,0 +1,283 @@
+/**
+	MODERN
+*/
+$modern: true;
+
+@import "classic.scss";
+@import "gallery";
+
+/**
+    GRID MODERN
+*/
+
+.column--full {
+    @include twelveTwelths;
+}
+
+/*
+    COMPACT: Modern mobiles
+*/
+@include respondMinMax(320px, 639px) {
+
+    .section {
+
+        .column,
+        .column--stay-right {
+
+            @include twelveTwelths;
+            float: left;
+
+        }
+
+        .column--thin {
+
+            @include fourTwelths;
+            float: left;
+
+        }
+
+        .column--micro {
+
+            @include sixTwelths;
+            float: left;
+
+        }
+
+    }
+
+}
+
+/*
+    COMPACT: Modern mobiles in landscape mode
+*/
+@include respondMinMax(480px, 639px) {
+
+    .section {
+
+        .column--main {
+
+            @include eightTwelths;
+            float: left;
+
+        }
+
+        .column--side {
+
+            @include fourTwelths;
+            float: left;
+
+        }
+
+    }
+
+}
+
+/*
+    TABLET: Small tablets and large phones
+*/
+@include respondMinMax(640px, 959px) {
+
+    .section {
+
+        .column {
+
+            @include sixTwelths;
+            float: left;
+
+        }
+
+        .column--stay-right {
+
+            @include sixTwelths;
+            float: right;
+        }
+
+        .column--thin {
+
+            @include fourTwelths;
+            float: left;
+
+        }
+
+        .column--micro {
+
+            @include threeTwelths;
+            float: left;
+
+        }
+
+        .column--main {
+
+            @include eightTwelths;
+            float: left;
+
+        }
+
+        .column--side {
+
+            @include fourTwelths;
+            float: left;
+
+        }
+
+        .column--image {
+
+            @include sixTwelths;
+            clear: both;
+            float: right;
+
+
+        }
+
+    }
+
+}
+
+/*
+    LAPTOP: Small laptops and large tablets
+*/
+@include respondMinMax(950px, 1200px) {
+
+    .section {
+
+        margin-left: auto;
+        margin-right: auto;
+        width: $maxPageWidth;
+
+        .column {
+
+            @include sixTwelths;
+            float: left;
+
+        }
+
+        .column--stay-right {
+
+            @include sixTwelths;
+            float: right;
+        }
+
+        .column--thin {
+
+            @include fourTwelths;
+            float: left;
+
+        }
+
+        .column--micro {
+
+            @include threeTwelths;
+            float: left;
+
+        }
+
+        .column--main {
+
+            @include eightTwelths;
+            float: left;
+
+        }
+
+        .column--side {
+
+            @include fourTwelths;
+            float: left;
+
+        }
+
+        .column--image {
+
+            @include sixTwelths;
+            clear: both;
+            float: right;
+
+
+        }
+
+    }
+
+}
+
+/*
+    WIDE: Desktop monitors and large laptops
+*/
+@include respondMinMax(1200px, false) {
+
+    .section {
+
+        margin-left: auto;
+        margin-right: auto;
+        width: $maxPageWidth;
+
+        .column {
+
+            @include sixTwelths;
+            float: left;
+
+        }
+
+        .column--stay-right {
+
+            @include sixTwelths;
+            float: right;
+
+        }
+
+        .column--thin {
+
+            @include fourTwelths;
+            float: left;
+
+        }
+
+        .column--micro {
+
+            @include threeTwelths;
+            float: left;
+
+        }
+
+        .column--main {
+
+            @include eightTwelths;
+            float: left;
+
+        }
+
+        .column--side {
+
+            @include fourTwelths;
+            float: left;
+
+        }
+
+        .column--image {
+
+            @include sixTwelths;
+            clear: both;
+            float: right;
+
+        }
+
+    }
+
+}
+
+
+// --- IMAGES ---
+
+.img {
+    margin-bottom: 1.5em;
+}
+
+.img img {
+    display: block;
+    width: 100%;
+}
+
+@include respondMinMax(false, 639px) {
+    .img img {
+        margin: 0 auto;
+        max-width: 80%;
+    }
+}

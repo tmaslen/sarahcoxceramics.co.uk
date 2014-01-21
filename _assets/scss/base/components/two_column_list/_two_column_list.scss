@@ -1,0 +1,32 @@
+@if $two_column_list_component {
+
+    ul.list--double {
+
+        padding-left: 50%;
+        width: 100%;
+
+        li {
+            list-style-position: inside;
+        }
+
+        li.col--left {
+            clear: left;
+            float: left;
+            margin-left: -50%;
+            width: 50%;
+        }
+
+        li.col--sub {
+            list-style-type: square;
+            padding-left: 5%;
+            margin-right: -5%;
+        }
+
+        li.col--right {
+            clear: none;
+            width: 50%;
+        }
+
+    }
+
+}

@@ -1,0 +1,31 @@
+.section--contact {
+    background: #eee;
+    position: relative;
+}
+
+.section--contact:before {
+    content: "";
+    border: 1em solid #eee;
+    border-bottom: none;
+    border-top: 1em solid #fff;
+    left: 50%;
+    margin-left: -1em;
+    position: absolute;
+    top: 0;
+}
+
+.section--footer {
+    background: #fff;
+    position: relative;
+}
+
+.section--footer:before {
+    content: "";
+    border: 1em solid #fff;
+    border-bottom: none;
+    border-top: 1em solid #eee;
+    left: 50%;
+    margin-left: -1em;
+    position: absolute;
+    top: 0;
+}

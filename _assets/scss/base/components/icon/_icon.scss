@@ -1,0 +1,64 @@
+@if button_component {
+
+  @font-face {
+    font-family: "SocialFoundicons";
+    src: url("/fonts/social_foundicons.eot");
+    src: url("/fonts/social_foundicons.eot?#iefix") format("embedded-opentype"), 
+         url("/fonts/social_foundicons.woff") format("woff"), 
+         url("/fonts/social_foundicons.ttf") format("truetype"), 
+         url("/fonts/social_foundicons.svg#SocialFoundicons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .icon {
+      border-radius: 50px;
+      background: #ccc;
+      color: #000;
+      cursor: pointer;
+      display: inline-block;
+      height: 40px;
+      line-height: 1px;
+      padding: 0;
+      position: relative;
+      width: 40px;
+  }
+
+  .icon:before {
+    bottom: 0;
+    font-family: "SocialFoundicons";
+    font-size: 25px;
+    left: 0;
+    line-height: 40px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .icon--twitter:before {
+    content: "\f004";
+  }
+
+  .icon--facebook:before {
+    content: "\f003";
+  }
+
+  .icon--pinterest:before {
+    content: "\f005";
+  }
+
+  @include respondMinMax(495px, false) {
+
+    .icon {
+        height: 60px;
+        width: 60px;
+    }
+
+    .icon:before {
+      font-size: 35px;
+      line-height: 60px;
+    }
+
+  }
+
+}

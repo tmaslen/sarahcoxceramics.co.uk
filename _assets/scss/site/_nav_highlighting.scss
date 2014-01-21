@@ -1,0 +1,10 @@
+#home .nav--item_home,
+#outdoor_sculptures .nav--item_outdoor_sculptures,
+#gallery_pieces .nav--item_gallery_pieces,
+#in_the_workshop .nav--item_in_the_workshop,
+#exhibitions .nav--item_exhibitions,
+#commissions .nav--item_commissions,
+#contact .nav--item_contact,
+#archive .nav--item_archive {
+  @include nav--item_selected;
+}

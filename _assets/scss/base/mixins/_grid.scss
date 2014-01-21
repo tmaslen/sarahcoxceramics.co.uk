@@ -1,0 +1,24 @@
+@mixin oneTwelth     { width: 8.33% }
+@mixin twoTwelths    { width: 16.66% }
+@mixin threeTwelths  { width: 25% }
+@mixin fourTwelths   { width: 33.33% }
+@mixin fiveTwelths   { width: 41.66% }
+@mixin sixTwelths    { width: 50% }
+@mixin sevenTwelths  { width: 58.33% }
+@mixin eightTwelths  { width: 66.66% }
+@mixin nineTwelths   { width: 75% }
+@mixin tenTwelths    { width: 83.33% }
+@mixin elevenTwelths { width: 91.66% }
+@mixin twelveTwelths { width: 100% }
+
+@mixin columnDefault {
+
+    @include twelveTwelths;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 $columnPadding;
+
+}

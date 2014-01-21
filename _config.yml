@@ -1,0 +1,12 @@
+auto: true
+server: true
+type: contentPage
+url: "sarahcoxart.co.uk"
+# baseurl: /sarahcoxartcouk
+exclude: ["node_modules", "img"]
+
+asset_pipeline:
+  compress: false
+  output_path: assets 
+
+

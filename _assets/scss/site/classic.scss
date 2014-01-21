@@ -1,0 +1,74 @@
+/**
+	CLASSIC
+*/
+$classic: true;
+
+@import "../base/general/bootstrap";
+@import "nav_highlighting";
+
+/**
+    GRID CLASSIC
+*/
+
+// --- VARIABLES ---
+
+$columnPadding: 1em !default;
+$maxPageWidth: 100% !default;
+$rowTopPadding: 0 !default;
+
+// --- GRID ---
+
+@if $rowTopPadding == 0 {
+    body {
+        margin-top: 1.5em;
+    }
+}
+
+.section {
+
+    max-width: $maxPageWidth;
+    overflow: hidden;
+    padding-top: $rowTopPadding;
+
+    .column,
+    .column--full,
+    .column--thin,
+    .column--main,
+    .column--side,
+    .column--stay-right {
+
+        @include columnDefault;
+
+        @include respondMinMax(false, 479px) {
+            clear: both;
+        }
+
+    }
+
+    .column--micro {
+        @include columnDefault;
+    }
+
+    > .h1 {
+
+        @include columnDefault;
+        
+        padding: 0 $columnPadding * 0.5;
+
+    }
+
+    > .h2 {
+
+        @include columnDefault;
+
+        padding: 0 $columnPadding * 0.5;
+
+    }
+
+    > .h3 {
+
+        @include columnDefault;
+
+    }
+
+}
