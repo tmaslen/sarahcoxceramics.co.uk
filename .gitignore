@@ -4,3 +4,4 @@ _assets/resp-img
 node_modules
 img
 .sass-cache
+output

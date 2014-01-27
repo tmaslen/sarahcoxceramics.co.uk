@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title><% if (title) { %><%= title %> -<% } %> sarahcoxart.co.uk</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<script>
+document.documentElement.className = "js";
+</script>
+<!--[if lte IE 8]>
+    <link type="text/css" rel="stylesheet" href="/css/legacy-ie.css?v=<%= version %>" />
+<![endif]-->
+<script type="text/javascript">
+    if('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
+        document.write('<link type="text/css" rel="stylesheet" href="/css/modern.css?v=<%= version %>" />');
+        loadJs = true;
+    }
+    else {
+        document.write('<link type="text/css" rel="stylesheet" href="/css/classic.css?v=<%= version %>" />');
+    }
+</script>
+<noscript>
+    <link type="text/css" rel="stylesheet" href="/css/classic.css?v=<%= version %>" />
+</noscript>
+</head>
+
+<body id="<%= id %>" class="<%= type %>">
+
+<header><div class="section section--head" id="head"><div class="column--full">
+
+<% if (id === "home") { %>
+        <h1 class="site-title">Sarah Cox</h1>
+<% } else { %>
+        <div class="site-title">Sarah Cox</div>
+<% } %>
+        <p class="byline">Ceramics Artist</p>
+
+</div></div></header>
