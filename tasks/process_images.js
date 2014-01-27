@@ -50,7 +50,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           src: ['**/*.{jpg,gif,png}'],
-          cwd: '_assets/resp-img/',
+          cwd: 'source/img/resp-img/',
           custom_dest: 'img/{%= width %}/'
         }]
       }

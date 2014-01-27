@@ -1,6 +1,6 @@
 .DS_Store
 _images/resp
-_assets/resp-img
+source/img/resp-img
 node_modules
 img
 .sass-cache
