@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
-  grunt.registerTask('process-images', [], function () {
+  grunt.registerTask('process_images', [], function () {
     grunt.loadNpmTasks('grunt-responsive-images');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.config('responsive_images', {
