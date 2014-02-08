@@ -188,6 +188,10 @@
 
     }
 
+    .image-caption {
+        font-family: Helmet, Freesans, sans-serif;
+    }
+
     .image--stretch {
         
         @include image;
@@ -256,6 +260,7 @@
      NAVIGATION
     */
 
+    .nav-button__txt,
     .nav {
         font-family: Helmet, Freesans, sans-serif;
     }

@@ -5,7 +5,7 @@ module.exports = function (grunt) {
         local: {
             options: {
                 hostname: '127.0.0.1',
-                port:     2000,
+                port:     8080,
                 directory: '/Users/maslet02/Dropbox/websites/sarahcoxart.co.uk/site/output',
                 middleware: function (connect, options) {
                     var middlewares = [];

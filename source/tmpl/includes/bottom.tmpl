@@ -1,11 +1,11 @@
 <section><div class="section section--nav"><div class="column--full">
 
-        <div class="menu--holder">
-            <a href="#nav" class="menu">
-                <span class="menu-txt">Menu</span>
-                <span class="menu-graphic"></span>
-                <span class="menu-graphic"></span>
-                <span class="menu-graphic"></span>
+        <div class="nav-button__holder">
+            <a href="#nav" class="nav-button__anchor">
+                <span class="nav-button__txt">Menu</span>
+                <span class="nav-button__graphic"></span>
+                <span class="nav-button__graphic"></span>
+                <span class="nav-button__graphic"></span>
             </a>
         </div>
         
@@ -28,35 +28,34 @@
 
         <div class="column--full">
 
-            <p><a href="https://twitter.com/intent/tweet?Sarah%20Cox%20Ceramics%20Artist%20http://sarahcoxart.co.uk" class="button button--inline icon icon--twitter" target="new">
+            <p><a href="https://twitter.com/intent/tweet?text=Sarah%20Cox%20Ceramics%20Artist%20http://sarahcoxceramics.co.uk" class="button button--inline icon icon--twitter" target="new">
                 <span class="button__text">Share this on Twitter</span>
-            </a>&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/dialog/feed?app_id=58567469885&redirect_uri=http%3A%2F%2Fsarahcoxart.co.uk&display=popup&link=http://sarahcoxart.co.uk&name=Sarah%20Cox%20Ceramics%20Artist%20http://sarahcoxart.co.uk&picture=http://sarahcoxart.co.uk/img/130/blue_elephant_curly_trunk.jpg" class="button button--inline icon icon--facebook">
+            </a><!--&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/dialog/feed?app_id=637432856324375&redirect_uri=http://localhost:8080/&display=popup&link=http://sarahcoxceramics.co.uk&name=Sarah%20Cox%20Ceramics%20Artist%20http://sarahcoxceramics.co.uk&picture=http://sarahcoxceramics.co.uk/img/130/blue_elephant_curly_trunk.jpg" class="button button--inline icon icon--facebook" target="new"-->
                 <span class="button__text">Share this on Facebook</span>
-            </a>&nbsp;&nbsp;&nbsp;<a href="" class="button button--inline icon icon--pinterest">
+            </a>&nbsp;&nbsp;&nbsp;<a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fsarahcoxceramics.co.uk&media=http%3A%2F%2Fwww.sarahcoxceramics.co.uk%2Fimg%2F130%2Ffountains_and_water_features%2Fsmaller_blue_comunal_shower_water_feature.jpg&description=Sarah%20Cox%20Ceramics%20Artist%20http%3A%2F%2Fsarahcoxceramics.co.uk%2F" class="button button--inline icon icon--pinterest" target="new">
                 <span class="button__text">Add to pinterest</span>
             </a></p>
 
         </div>
 
 </div></section>
-<!--[if gt IE 8]><!-->
-    <script type="text/javascript">
-        if (
-            ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) ||
-            (/MSIE (7|8)/.test(navigator.userAgent))
-        ) {
-            document.write('<scr' + 'ipt type="text/javascript" src="js/main.js?v=<%= version %>"></scr' + 'ipt>');
-        }
-        if (window.location.host.indexOf('http://sarahcoxart.co.uk') > -1) {
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-39759000-1', '{{url}}');
-            ga('send', 'pageview');
-        }
-    </script>
-<!--<![endif]-->
+
+<script type="text/javascript">
+    if (
+        ('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) ||
+        (/MSIE (7|8)/.test(navigator.userAgent))
+    ) {
+        document.write('<scr' + 'ipt type="text/javascript" src="js/main.js?v=<%= version %>"></scr' + 'ipt>');
+    }
+    if (window.location.host.indexOf('http://sarahcoxceramics.co.uk') > -1) {
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-39759000-1', '{{url}}');
+        ga('send', 'pageview');
+    }
+</script>
 
 </body>
 </html>

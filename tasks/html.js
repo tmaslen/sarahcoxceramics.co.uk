@@ -8,7 +8,7 @@ module.exports = function (grunt) {
                 vocab_directory:    'source',
                 template_directory: 'source/tmpl',
                 data: {
-                    "version": 1.0
+                    "version": '<%= pkg.version %>'
                 }
             },
             files: {

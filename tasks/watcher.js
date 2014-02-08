@@ -17,7 +17,7 @@ module.exports = function (grunt) {
                 }
             },
             html: {
-                files: ['./source/tmpl/*'],
+                files: ['./source/tmpl/**/*'],
                 tasks: ['html'],
                 options: {
                     spawn: false,

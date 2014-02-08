@@ -15,6 +15,17 @@ module.exports = function (grunt) {
             }
         }
     });
-    grunt.task.run('uglify');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.config('copy', {
+        'polyfills': {
+            files: [{
+                expand: true,
+                cwd: 'source/js/vendor/polyfills/',
+                src:  ['html5shiv.js'],
+                dest: 'output/js/vendor/polyfills'
+            }]
+        }
+    });
+    grunt.task.run('uglify', 'copy:polyfills');
   });
 };

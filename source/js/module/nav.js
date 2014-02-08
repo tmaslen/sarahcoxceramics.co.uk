@@ -1,6 +1,6 @@
 !function() {
 
-    $('.menu--holder').on('click', function(e) {
+    $('.nav-button__holder').on('click', function(e) {
         $('body').toggleClass('js-nav--open');
         if ($(e.target).hasClass('menu')) {
             return false;
@@ -12,7 +12,7 @@
     $('body').append('<div class="nav--mask"></div>');
 
     $('.section--nav').insertAfter('.section--head');
-    $($('.section--head .site-title')[0].parentNode).append($('.section--nav .menu--holder'));
+    $($('.section--head .site-title')[0].parentNode).append($('.section--nav .nav-button__holder'));
 
     var lastHoverOver = null,
         hovering = false,
@@ -28,7 +28,6 @@
         $('body').removeClass('js-nav--open');
     }
     function navSubPauseClose() {
-        console.log('navSub called');
         hovering = false;
         if (!pauseCloseInProgress) {
             pauseCloseInProgress = true;

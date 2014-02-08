@@ -17,8 +17,27 @@
                 if (div.className.search('js-no_replace') > -1) {
                     return;
                 }
-                var additional_classes = div.className.replace('js-delayed_image_load', '');
-                $(div).replaceWith('<img src="' + responsive_images.calc_img_src(div.getAttribute('data-src'), div.clientWidth) + '" class="js-image_replace ' + additional_classes + '" />');
+                // if (div.getAttribute('data-caption')) {
+                //     var orientation = "";
+                //     if (div.className.indexOf('portrait') > -1) {
+                //         orientation = "portrait";
+                //     }
+                //     else {
+                //         orientation = "landscape";
+                //     }
+                //     $(div).after('<div class="image-caption image-caption--' + orientation + '">' + (div.getAttribute('data-caption') || '') + '</div>');
+                // }
+                var additional_classes = div.className.replace('js-delayed_image_load', ''),
+                    img = $(
+                        '<img src="' + 
+                        responsive_images.calc_img_src(div.getAttribute('data-src'), div.clientWidth) + 
+                        '" alt="' + 
+                        (div.getAttribute('data-alt') || "") + 
+                        '" class="js-image_replace ' + 
+                        additional_classes + 
+                        '" />'
+                    );
+                $(div).replaceWith(img[0]);
             });
         },
         /*
@@ -30,9 +49,7 @@
             if (imgSrc === null) return false; // make sure to return false if we can't use the value
             var regex = imgSrc.match(/img\/(\d*)/) || imgSrc;
             if (regex === null || typeof regex == 'string') return false; // make sure to return false if we can't use the value
-            var widthMatchStart = imgSrc.indexOf(regex[1]),
-                widthMatchEnd = regex[1].length;
-            return imgSrc.substr(0, widthMatchStart) + this.match_closest_value(width, this.widths) + imgSrc.substr(widthMatchStart+widthMatchEnd);
+            return imgSrc.replace(/img\/(\d*)/, "img/" + this.match_closest_value(width, this.widths));
         },
         /*
             match_closest_value: returns a value closest to (but not over) from the array 'widths'

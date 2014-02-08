@@ -2,26 +2,27 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title><% if (title) { %><%= title %> -<% } %> sarahcoxart.co.uk</title>
+<title><% if (title) { %><%= title %> -<% } %> sarahcoxceramics.co.uk</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-<script>
-document.documentElement.className = "js";
-</script>
-<!--[if lte IE 8]>
-    <link type="text/css" rel="stylesheet" href="/css/legacy-ie.css?v=<%= version %>" />
-<![endif]-->
 <script type="text/javascript">
+    document.documentElement.className = "js";
     if('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
-        document.write('<link type="text/css" rel="stylesheet" href="/css/modern.css?v=<%= version %>" />');
+        document.write('<li' + 'nk type="text/css" rel="stylesheet" href="/css/modern.css?v=<%= version %>" />');
         loadJs = true;
     }
+    else if (/MSIE (7|8)/.test(navigator.userAgent)) {
+        document.write('<li' + 'nk type="text/css" rel="stylesheet" href="/css/legacy-ie.css?v=<%= version %>" />');
+    }
     else {
-        document.write('<link type="text/css" rel="stylesheet" href="/css/classic.css?v=<%= version %>" />');
+        document.write('<li' + 'nk type="text/css" rel="stylesheet" href="/css/classic.css?v=<%= version %>" />');
     }
 </script>
 <noscript>
     <link type="text/css" rel="stylesheet" href="/css/classic.css?v=<%= version %>" />
 </noscript>
+<!--[if IE]>
+<script type="text/javascript" src="js/vendor/polyfills/html5shiv.js?v=<%= version %>"></script>
+<![endif]-->
 </head>
 
 <body id="<%= id %>" class="<%= type %>">

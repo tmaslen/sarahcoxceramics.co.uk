@@ -13,7 +13,7 @@
             text-transform: uppercase;
             z-index: 5;
 
-            .menu {
+            .nav--button__anchor {
                 display: none;
             }
 
@@ -21,7 +21,7 @@
                 //padding: 1em;
             }
 
-            a.menu:hover {
+            a.nav-button__anchor:hover {
                 text-decoration: none;
             }
 
@@ -68,8 +68,6 @@
 
     @if $modern {
 
-//        @include respondMinMax(false, 639px) {
-
         body {
             position: relative;
         }
@@ -88,112 +86,113 @@
             top: 0;
         }
 
-            .js {
+        .js {
 
-                .menu--holder {
+            .nav-button__holder {
+                margin: 1em 0 auto;
+            }
 
-                    margin: 1em 0 auto;
+            .nav-button__anchor {
+                background: #ccc;
+                border-radius: 5px;
+                display: block;
+                font-size: 1.5em;
+                margin: 0 auto;
+                overflow: hidden;
+                padding: 0.5em;
+                position: relative;
+                width: 5em;
+                zoom: 1;
+            }
 
-                    .menu {
-                        background: #ccc;
-                        border-radius: 50px;
-                        display: block;
-                        height: 2.5em;
-                        margin: 0 auto;
-                        padding: 1em;
-                        position: relative;
-                        width: 2.5em;
+            .nav-button__anchor:hover {
+                background: #47a3da;
+            }
 
-                        .menu-txt {
-                            position: absolute;
-                            left: -10000px;
-                        }
+            .nav-button__anchor:active {
+                background: #47a3da;
+            }
 
-                        .menu-graphic {
-                            background: #000;
-                            display: block;
-                            height: 0.4em;
-                            line-height: 1px;
-                            margin: 0.4em 0;
-                            width: 100%;
-                        }
-                    }
+            .nav-button__txt {
+                color: #000;
+                float: left;
+                text-transform: uppercase;
+            }
 
-                    .menu:hover {
-                        background: #47a3da;
-                    }
+            .nav-button__graphic {
+                background: #000;
+                clear: right;
+                display: block;
+                float: right;
+                height: 3px;
+                line-height: 1px;
+                margin: 2px 0 0;
+                width: 25%;
+            }
 
-                    .menu:active {
-                        background: #47a3da;
-                    }
+            .section--nav {
 
+                clear: none;
+                margin-top: 0;
+                margin-bottom: 0;
+                overflow: visible;
+                position: relative;
+
+                .nav {
+                    -webkit-transition: opacity 0.3s ease-in-out;
+                       -moz-transition: opacity 0.3s ease-in-out;
+                        -ms-transition: opacity 0.3s ease-in-out;
+                         -o-transition: opacity 0.3s ease-in-out;
+                            transition: opacity 0.3s ease-in-out;
+
+                    background: #47a3da;
+                    background: rgba(71, 163, 218, 0.9);
+                    border-radius: 5px;
+                    left: 0;
+                    height: 0;
+                    margin: 0 1em 1em;
+                    position: absolute;
+                    opacity: 0;
+                    overflow: hidden;
+                    right: 0;
+                    top: 0;
                 }
 
-                .section--nav {
+            }
 
-                    clear: none;
-                    margin-top: 0;
-                    margin-bottom: 0;
+           .js-nav--open {
+
+                .nav {
+                    border-radius: 5px;
+                    clear: both;
+                    height: auto;
+                    opacity: 1;
                     overflow: visible;
-                    position: relative;
-
-                    .nav {
-                            -webkit-transition: opacity 0.3s ease-in-out;
-                               -moz-transition: opacity 0.3s ease-in-out;
-                                -ms-transition: opacity 0.3s ease-in-out;
-                                 -o-transition: opacity 0.3s ease-in-out;
-                                    transition: opacity 0.3s ease-in-out;
-
-                        background: #47a3da;
-                        background: rgba(71, 163, 218, 0.9);
-                        border-radius: 5px;
-                        left: 0;
-                        height: 0;
-                        margin: 0 1em 1em;
-                        position: absolute;
-                        opacity: 0;
-                        overflow: hidden;
-                        right: 0;
-                        top: 0;
-                    }
-
+                    margin-top: 0.5em;
+                    z-index: 10;
                 }
 
-               .js-nav--open {
+                .nav:before {
+                    content: "";
+                    border: 0.5em solid #000;
+                    border-top: none;
+                    border-bottom: 0.5em solid #47a3da;
+                    border-bottom: 0.5em solid rgba(71, 163, 218, 0.8);
+                    left: 50%;
+                    margin-left: -0.5em;
+                    position: absolute;
+                    top: -0.5em;
+                }
 
-                    .nav {
-                        border-radius: 5px;
-                        clear: both;
-                        height: auto;
-                        opacity: 1;
-                        overflow: visible;
-                        margin-top: 0.5em;
-                        z-index: 10;
-                    }
+                .nav-button {
 
-                    .nav:before {
-                        content: "";
-                        border: 0.5em solid #000;
-                        border-top: none;
-                        border-bottom: 0.5em solid #47a3da;
-                        border-bottom: 0.5em solid rgba(71, 163, 218, 0.8);
-                        left: 50%;
-                        margin-left: -0.5em;
-                        position: absolute;
-                        top: -0.5em;
-                    }
-
-                    .menu {
-
-                        background: #47a3da;
-
-                    }
+                    background: #47a3da;
 
                 }
 
             }
 
-//        }
+        }
 
         @include respondMinMax(360px, false) {
 
@@ -203,31 +202,31 @@
                     position: relative;
                 }
 
-                .menu--holder {
-
+                .nav-button__holder {
                     margin-top: 0;
                     position: absolute;
                     right: 1em;
                     top: 1em;
                     text-align: center;
                     width: 25%;
-                    
-                    .menu {
-                        float: right;
-                        margin: 0;
-                    }
-
                 }
+                    
+                .nav-button__anchor {
+                    float: right;
+                    margin: 0;
+                }
+
 
                 .js-nav--open {
 
                     .nav {
                         left: 50%;
+                        margin-top: -0.75em;
                     }
 
                     .nav:before {
                         left: auto;
-                        right: 1.75em;
+                        right: 3.8em;
                     }
 
                 }
@@ -238,25 +237,20 @@
 
         @include respondMinMax(480px, false) {
             .js {
-                .menu--holder {
-                    .menu {
-                        .menu-graphic {
-                            height: 0.425em;
-                        }
-                    }
+
+                .nav-button__graphic {
+                    margin-top: 3px;
                 }
+
             }
         }
 
         @include respondMinMax(840px, false) {
 
             .js {
-                .menu--holder {
-                    .menu {
-                        .menu-graphic {
-                            height: 6px;
-                        }
-                    }
+
+                .nav-button__graphic {
+                    margin-top: 4px;
                 }
 
                .js-nav--open {
