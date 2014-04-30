@@ -40,7 +40,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 33%;
 
     img {
       display: block;
@@ -55,13 +55,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 33%;
 
     img {
       display: block;
       width: 100%;
     }
 
+  }
+
+  .column--stay-right {
+    float: right !important;
   }
 
 }

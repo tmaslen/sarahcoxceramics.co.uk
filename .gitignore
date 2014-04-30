@@ -5,3 +5,5 @@ node_modules
 img
 .sass-cache
 output
+notes.md
+npm-debug.log

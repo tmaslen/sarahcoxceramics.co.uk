@@ -21,8 +21,7 @@ $modern: true;
 
     .section {
 
-        .column,
-        .column--stay-right {
+        .column {
 
             @include twelveTwelths;
             float: left;
@@ -86,12 +85,6 @@ $modern: true;
 
         }
 
-        .column--stay-right {
-
-            @include sixTwelths;
-            float: right;
-        }
-
         .column--thin {
 
             @include fourTwelths;
@@ -151,12 +144,6 @@ $modern: true;
 
         }
 
-        .column--stay-right {
-
-            @include sixTwelths;
-            float: right;
-        }
-
         .column--thin {
 
             @include fourTwelths;
@@ -213,13 +200,6 @@ $modern: true;
 
             @include sixTwelths;
             float: left;
-
-        }
-
-        .column--stay-right {
-
-            @include sixTwelths;
-            float: right;
 
         }
 
