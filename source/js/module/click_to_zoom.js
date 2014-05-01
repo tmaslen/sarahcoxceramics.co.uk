@@ -21,7 +21,7 @@
 
 		this.showImage = function (imgElm) {
 			this.elm.removeClass('hide');
-			this.imgHolder.html('<img src="' + imgElm.src + '" class="js-image_replace" /><div class="image-caption">"' + imgElm.alt + '"</div>');
+			this.imgHolder.html('<img src="' + imgElm.src + '" class="js-image_replace click-to-zoom__no" /><div class="image-caption">"' + imgElm.alt + '"</div>');
 			this.elm.find('.click-to-zoom__close-button')[0].focus();
 			this.elmToReturnTo = imgElm;
 			if (pubsub) {
