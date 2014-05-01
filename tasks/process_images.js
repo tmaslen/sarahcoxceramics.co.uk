@@ -39,7 +39,7 @@ module.exports = function (grunt) {
     }
     else {
       process_images([{
-          width: size,
+          width: size
       }]);
     }
   });
