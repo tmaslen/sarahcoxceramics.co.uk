@@ -59,7 +59,15 @@
 
     img {
       display: block;
+      max-width: 500px;
       width: 100%;
+    }
+
+    img:before {
+      content: "hello";
+      display: block;
+      height: 300px;
+      background: green;
     }
 
   }
@@ -70,9 +78,40 @@
 
 }
 
+@include respondMinMax(1100px, 1454px) {
+  .image-flush-left {
+    width: 36%;
+  }
+}
 
-@include respondMinMax(false, 639px) {
+@include respondMinMax(1455px, false) {
+  .image-flush-left {
+    left: 6%;
+  }
+}
 
+@include respondMinMax(1575px, false) {
+  .image-flush-left {
+    left: 8%;
+  }
+}
+
+@include respondMinMax(1655px, false) {
+  .image-flush-left {
+    left: 10%;
+  }
+}
+
+@include respondMinMax(1755px, false) {
+  .image-flush-left {
+    left: 12%;
+  }
+}
+
+@include respondMinMax(1855px, false) {
+  .image-flush-left {
+    left: 14%;
+  }
 }
 
 @include respondMinMax(640px, false) {
