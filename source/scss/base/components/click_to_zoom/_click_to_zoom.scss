@@ -3,9 +3,17 @@ img {
 }
 
 .click-to-zoom__modal {
+    -webkit-transition: opacity 0.3s ease-in-out;
+     -moz-transition: opacity 0.3s ease-in-out;
+      -ms-transition: opacity 0.3s ease-in-out;
+       -o-transition: opacity 0.3s ease-in-out;
+          transition: opacity 0.3s ease-in-out;
+    opacity: 1;
 	bottom: 0;
 	left: 0;
+	overflow: auto;
 	position: absolute;
+	position: fixed;
 	right: 0;
 	top: 0;
 	z-index: 15;
@@ -13,7 +21,7 @@ img {
 
 .click-to-zoom__modal:before {
 	background: #000;
-	background: rgba(0, 0, 0, 0.75);
+	background: rgba(0, 0, 0, 1);
 	content: "";
 	bottom: 0;
 	left: 0;
@@ -48,13 +56,30 @@ img {
 }
 
 .click-to-zoom__img-holder {
-	margin: 4em 1em 0;
+	margin: 0;
+	padding: 0;
 	position: relative;
 	z-index: 15;
 }
 
+.click-to-zoom__img-holder--landscape {
+	margin: 4em 1em 0;
+}
+
+.click-to-zoom__img-holder--portrait {
+	margin-left: 0;
+	margin-right: 4em;
+}
+
+@include respondMinMax(736px, false) {
+	.click-to-zoom__img-holder--portrait {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 @include respondMinMax(960px, false) {
-	.click-to-zoom__img-holder {
+	.click-to-zoom__img-holder--landscape {
 		margin-left: auto;
 		margin-right: auto;
 		width: 960px;
@@ -63,4 +88,17 @@ img {
 
 .click-to-zoom__no {
 	cursor: auto;
+}
+
+.hide--modal {
+	bottom: -10000px;
+	left: -10000px;
+	opacity: 0;
+	position: absolute;
+	top: -10000px;
+	right: 10000px;
+}
+
+.image-caption--click-to-zoom {
+	margin-top: 0 !important;
 }
